@@ -4,3 +4,4 @@ checkpoints.db
 request_test.py
 test_run.py
 __pycache__/
+venv/

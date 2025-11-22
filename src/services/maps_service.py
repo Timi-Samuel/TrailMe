@@ -1,10 +1,12 @@
 import requests
 import os
+from dotenv import load_dotenv
 from abc import ABC, abstractmethod
-from src.services.custom_exceptions import InvalidTravelModeError
+from services.custom_exceptions import InvalidTravelModeError
 
 url = "https://routes.googleapis.com/directions/v2:computeRoutes"
-
+# Path to my .env file
+load_dotenv('C:/Users/lenovo/VScode_projects/TrailMe/.env')
 API_KEY = os.getenv('GOOGLE_API_KEY')
 
 

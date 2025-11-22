@@ -49,6 +49,7 @@ TrailMe/
 │── .env
 │── .gitignore
 │── LICENSE
+│── requirements.txt
 │── sample_google_api_response.txt # Used postman to get a json doc just to see what keys and values the google api response gave back
 ```
 
