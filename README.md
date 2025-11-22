@@ -1,19 +1,19 @@
 # TrailMe
 
 TrailMe is a lightweight location–tracking and navigation assistant designed for scenarios where you need to remember a physical location — such as a parking spot, a hidden trail point, or any place you want to return to later.
-The system lets you *capture your coordinates*, *label the location*, *store an image of the surroundings*, and *later navigate back to it* using step-by-step walking directions powered by Google Maps.
+The system lets you **capture your coordinates**, **label the location**, **store an image of the surroundings**, and **later navigate back to it** using step-by-step walking directions powered by Google Maps.
 
 ---
 
 ## 🚀 Features
 ### Core Checkpoint Management
-* *Add a Checkpoint*
+* **Add a Checkpoint**
 Store a location with label, image, latitude, and longitude.
-* *Update a Checkpoint*
+* **Update a Checkpoint**
 Modify existing checkpoints with new data
-* *Delete a Checkpoint*
+* **Delete a Checkpoint**
 Remove unwanted checkpoints permanently.
-* *View all Checkpoints*
+* **View all Checkpoints**
 Retrieve a list of all stored checkpoint records.
 
 ### Navigation + Routing
@@ -22,7 +22,7 @@ Retrieve a list of all stored checkpoint records.
   * Estimated distance
   * Estimated duration
   * Step-by-step navigation instructions
-* Supported travel mode: *Walking*, *Driving*
+* Supported travel mode: **Walking**, **Driving**
 
 ### Simulated Frontend
 A `simulated_frontend.py` script is included to sent requests to all backend routes, acting as a mock client.
@@ -84,7 +84,7 @@ Example request body:
   "id": 1,
   "olat": -33.9150,
   "olong": 18.5200,
-  "travel_mode": "WALK"
+  "travel_mode": "WALK" # Or "DRIVE"
 }
 ```
 
@@ -128,7 +128,7 @@ TrailMe backend is fully built and ready for any frontend. Possible options incl
 
 ## 🛠️ Troubleshooting & Common Pitfalls
 ### 1. `__init__() takes 1 positional argument but 6 were given`
-This happened because the SQLAlchemy `Checkpoint` model was instantiated using *positional arguments*:
+This happened because the SQLAlchemy `Checkpoint` model was instantiated using **positional arguments**:
 ```python
 checkpoint = Checkpoint(self.__id, self.__label, self.__image, self.__latitude, self.__longitude)
 ```
@@ -150,7 +150,7 @@ This happened because I wrote:
 ```python
 match = session.query(Checkpoint).get(self.id)
 ```
-The issue with this is the `self.__id` was set to *None* by default, sonce the /add endpoint did not send an ID.
+The issue with this is that I had set `self.__id` to **None** as a default value, and sonce the `/add` endpoint did not send an ID, the query would not be successful.
 
 #### Solution:
 ```python
