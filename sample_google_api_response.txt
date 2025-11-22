@@ -1,0 +1,398 @@
+{
+  "routes": [
+    {
+      "legs": [
+        {
+          "steps": [
+            {
+              "distanceMeters": 128,
+              "staticDuration": "103s",
+              "polyline": {
+                "encodedPolyline": "t`mmEuozoBaEgAWM"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.8229931,
+                  "longitude": 18.4909926
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.8218987,
+                  "longitude": 18.4914172
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "DEPART",
+                "instructions": "Head north on Raats Dr"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.1 km"
+                },
+                "staticDuration": {
+                  "text": "2 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 243,
+              "staticDuration": "208s",
+              "polyline": {
+                "encodedPolyline": "zylmEkrzoBQ?g@b@Q@uE`DsA|@"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.8218987,
+                  "longitude": 18.4914172
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.8200323,
+                  "longitude": 18.4901083
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "ROUNDABOUT_LEFT",
+                "instructions": "At the roundabout, take the 1st exit onto Short St"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.2 km"
+                },
+                "staticDuration": {
+                  "text": "3 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 70,
+              "staticDuration": "58s",
+              "polyline": {
+                "encodedPolyline": "dnlmEejzoBILQx@MdA"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.8200323,
+                  "longitude": 18.4901083
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.819820799999995,
+                  "longitude": 18.4894026
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "STRAIGHT",
+                "instructions": "Continue straight onto Erica Rd"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "70 m"
+                },
+                "staticDuration": {
+                  "text": "1 min"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 514,
+              "staticDuration": "418s",
+              "polyline": {
+                "encodedPolyline": "zllmEwezoBUJsAWk@EeBY_EuBQEyAIoACyABiDP"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.819820799999995,
+                  "longitude": 18.4894026
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.815364699999996,
+                  "longitude": 18.4901982
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_RIGHT",
+                "instructions": "Turn right"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.5 km"
+                },
+                "staticDuration": {
+                  "text": "7 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 117,
+              "staticDuration": "95s",
+              "polyline": {
+                "encodedPolyline": "~pkmEwjzoBP|F"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.815364699999996,
+                  "longitude": 18.4901982
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.8154451,
+                  "longitude": 18.488934399999998
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_LEFT",
+                "instructions": "Turn left onto Link Rd"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.1 km"
+                },
+                "staticDuration": {
+                  "text": "2 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 2595,
+              "staticDuration": "2135s",
+              "polyline": {
+                "encodedPolyline": "pqkmEybzoBcCl@kAd@eEvBqj@bW}q@h[iB|@sGrC_DzAKH_GrC"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.8154451,
+                  "longitude": 18.488934399999998
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.7942484,
+                  "longitude": 18.477221099999998
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_RIGHT",
+                "instructions": "Turn right onto W Coast Rd/R27"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "2.6 km"
+                },
+                "staticDuration": {
+                  "text": "36 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 634,
+              "staticDuration": "517s",
+              "polyline": {
+                "encodedPolyline": "`mgmEsywoB]J_NlG{JjEaAb@sAf@"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.7942484,
+                  "longitude": 18.477221099999998
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.7890535,
+                  "longitude": 18.4744092
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_SLIGHT_RIGHT",
+                "instructions": "Slight right to stay on W Coast Rd/R27"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.6 km"
+                },
+                "staticDuration": {
+                  "text": "9 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 341,
+              "staticDuration": "280s",
+              "polyline": {
+                "encodedPolyline": "plfmEahwoBmAoDs@_Di@iEMeBCu@"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.7890535,
+                  "longitude": 18.4744092
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.78810000000001,
+                  "longitude": 18.4778849
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_RIGHT",
+                "instructions": "Turn right onto Berkshire Blvd/M120"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "0.3 km"
+                },
+                "staticDuration": {
+                  "text": "5 mins"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 75,
+              "staticDuration": "65s",
+              "polyline": {
+                "encodedPolyline": "rffmEw}woBUDUGGKAUw@B"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.78810000000001,
+                  "longitude": 18.4778849
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.7875466,
+                  "longitude": 18.4780382
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "ROUNDABOUT_LEFT",
+                "instructions": "At the roundabout, take the 3rd exit"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "75 m"
+                },
+                "staticDuration": {
+                  "text": "1 min"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 73,
+              "staticDuration": "65s",
+              "polyline": {
+                "encodedPolyline": "dcfmEw~woBI[@OPU?EEiA"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.7875466,
+                  "longitude": 18.4780382
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.7875733,
+                  "longitude": 18.4787692
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_RIGHT",
+                "instructions": "Turn right"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "73 m"
+                },
+                "staticDuration": {
+                  "text": "1 min"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 67,
+              "staticDuration": "58s",
+              "polyline": {
+                "encodedPolyline": "hcfmEicxoBOAeBJ"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.7875733,
+                  "longitude": 18.4787692
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.786978999999995,
+                  "longitude": 18.478718
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_LEFT",
+                "instructions": "Turn left"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "67 m"
+                },
+                "staticDuration": {
+                  "text": "1 min"
+                }
+              },
+              "travelMode": "WALK"
+            },
+            {
+              "distanceMeters": 52,
+              "staticDuration": "44s",
+              "polyline": {
+                "encodedPolyline": "r_fmE_cxoBBVLx@@Z"
+              },
+              "startLocation": {
+                "latLng": {
+                  "latitude": -33.786978999999995,
+                  "longitude": 18.478718
+                }
+              },
+              "endLocation": {
+                "latLng": {
+                  "latitude": -33.7870807,
+                  "longitude": 18.4781728
+                }
+              },
+              "navigationInstruction": {
+                "maneuver": "TURN_LEFT",
+                "instructions": "Turn left\nDestination will be on the right"
+              },
+              "localizedValues": {
+                "distance": {
+                  "text": "52 m"
+                },
+                "staticDuration": {
+                  "text": "1 min"
+                }
+              },
+              "travelMode": "WALK"
+            }
+          ]
+        }
+      ],
+      "distanceMeters": 4909,
+      "duration": "4045s"
+    }
+  ]
+}
