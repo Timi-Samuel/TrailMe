@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = "http://127.0.0.1:5050"
+BASE_URL = "http://127.0.0.1:5050"  # localhost
 id = 1  # Set to whichever checkpoint id you want
 
 # 1. Home
