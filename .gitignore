@@ -1,0 +1,6 @@
+sample_google_api_response.txt
+.env
+error_documenting.txt
+checkpoints.db
+request_test.py
+test_run.py
