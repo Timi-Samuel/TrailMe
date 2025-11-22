@@ -33,15 +33,22 @@ A `simulated_frontend.py` script is included to sent requests to all backend rou
 
 ```graphql
 TrailMe/
-│
-├── check_service.py          # CRUD operations for checkpoints
-├── custom_exceptions.py      # Custom error classes
-├── license                   # License information
-├── main.py                   # Flask API with all HTTP routes
-├── maps_service.py           # Google Maps API logic (routing & directions)
-├── model.py                  # SQLAlchemy model for checkpoints
-├── simulated_frontend.py     # Test script simulating frontend requests
-└── requirements.txt          # Python dependencies
+│── .git
+│── src/
+│   ├── database/
+│── |    └── checkpoints.db
+│   ├── models/
+│   │   └── model.py
+│   ├── services/
+│   │   ├── check_service.py
+│   │   ├── custom_exceptions.py
+│   │   └── maps_service.py
+│   └── main.py
+│── tests/
+│   └── simulated_frontend.py
+│── .env
+│── .gitignore
+│── LICENSE
 ```
 
 ---
