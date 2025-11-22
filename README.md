@@ -114,8 +114,7 @@ python main.py
 ```
 Backend will start on:
 ```adruino
-http://localhost:5050
-```
+http://127.0.0.1:5050
 
 ---
 
