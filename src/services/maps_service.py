@@ -1,7 +1,7 @@
 import requests
 import os
 from abc import ABC, abstractmethod
-from custom_exceptions import InvalidTravelModeError
+from src.services.custom_exceptions import InvalidTravelModeError
 
 url = "https://routes.googleapis.com/directions/v2:computeRoutes"
 

@@ -1,5 +1,5 @@
-from model import Checkpoint, SessionHandler
-from custom_exceptions import CheckpointNotFoundError, CheckPointAlreadyExistsError, NoTargetsFoundError
+from src.models.model import Checkpoint, SessionHandler
+from src.services.custom_exceptions import CheckpointNotFoundError, CheckPointAlreadyExistsError, NoTargetsFoundError
 
 
 class CheckService:

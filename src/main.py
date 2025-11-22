@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
-from check_service import CheckService
-from maps_service import TravelModeSelector
-from custom_exceptions import CheckPointAlreadyExistsError, CheckpointNotFoundError, NoTargetsFoundError, InvalidTravelModeError
+from src.services.check_service import CheckService
+from src.services.maps_service import TravelModeSelector
+from src.services.custom_exceptions import CheckPointAlreadyExistsError, CheckpointNotFoundError, NoTargetsFoundError, InvalidTravelModeError
 app = Flask(__name__)
 
 
