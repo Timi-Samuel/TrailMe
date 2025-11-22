@@ -79,7 +79,7 @@ TrailMe/
 ```
 
 Example request body:
-```json
+```python
 {
   "id": 1,
   "olat": -33.9150,
