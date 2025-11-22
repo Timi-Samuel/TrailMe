@@ -1,5 +1,4 @@
 from model import Checkpoint, SessionHandler
-from bytes_converter import BytesConverter
 from custom_exceptions import CheckpointNotFoundError, CheckPointAlreadyExistsError, NoTargetsFoundError
 
 

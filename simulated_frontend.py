@@ -10,7 +10,7 @@ print("Home endpoint:", response.status_code, response.json())
 # 2. Add checkpoint
 checkpoint_payload = {
     "label": "My Home",
-    "image": None,
+    "image": None,  # If you want to store an image, it should be put here in bytes
     "latitude": -33.9142607,
     "longitude": 18.5191269
 }
