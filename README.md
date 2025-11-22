@@ -49,16 +49,17 @@ TrailMe/
 │── .env
 │── .gitignore
 │── LICENSE
+│── sample_google_api_response.txt # Used postman to get a json doc just to see what keys and values the google api response gave back
 ```
 
 ---
 
 ## 🛠️ Technologies Used
-### Backend
-* Python 3
-* Flask - API framework
-* SQLALchemy - ORM for SQLite database
-* Google Maps Routes API - for directions and route calculations
+* **Python 3**
+* **Flask** - API framework
+* **SQLALchemy** - ORM for SQLite database
+* **Google Maps Routes API** - for directions and route calculations
+* **Postman** – Used to inspect the Google Directions API JSON responses
 
 ### Python Libraries
 * `requests`
