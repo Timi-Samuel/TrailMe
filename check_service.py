@@ -17,7 +17,7 @@ class CheckService:
         session = session.make_session()
         targets = session.query(Checkpoint).all()
         if targets:
-            if len(targets > 0):
+            if len(targets) > 0:
                 return [[i.id, i.label, i.image, i.latitude, i.longitude] for i in targets]
         raise NoTargetsFoundError("No targets found")
 
@@ -29,10 +29,14 @@ class CheckService:
             latitude=self.__latitude,
             longitude=self.__longitude
         )
+
         session = SessionHandler()
         session = session.make_session()
         match = session.query(Checkpoint).filter_by(
-            label=self.__label, latitude=self.__latitude, longitude=self.__longitude).first()
+            label=self.__label,
+            latitude=self.__latitude,
+            longitude=self.__longitude).first()
+
         if match:
             raise CheckPointAlreadyExistsError("Checkpoint Already Exists")
         session.add(checkpoint)
@@ -45,10 +49,14 @@ class CheckService:
         target = session.query(Checkpoint).get(self.__id)
         if not target:
             raise CheckpointNotFoundError("Checkpoint Not Found")
-        target.label = self.__label
-        target.image = self.__image
-        target.latitude = self.__latitude
-        target.longitude = self.__longitude
+        if self.__label is not None:
+            target.label = self.__label
+        if self.__image is not None:
+            target.image = self.__image
+        if self.__latitude is not None:
+            target.latitude = self.__latitude
+        if self.__longitude is not None:
+            target.longitude = self.__longitude
         session.commit()
         return
 
@@ -66,6 +74,7 @@ class CheckService:
         session = SessionHandler()
         session = session.make_session()
         target = session.query(Checkpoint).get(self.__id)
+
         if not target:
-            CheckpointNotFoundError("Checkpoint Not Found")
+            raise CheckpointNotFoundError("Checkpoint Not Found")
         return {'lat': target.latitude, 'long': target.longitude}

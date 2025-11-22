@@ -27,25 +27,29 @@ class MapService(ABC):
         pass
 
     def make_post(self):
-        headers = self.get_headers()
-        payload = self.get_payload()
-        response = requests.post(url=url, json=payload, headers=headers)
-        return response
+        response = requests.post(
+            url=url, json=self.get_payload(), headers=self.get_headers())
+        if response.status_code != 200:
+            raise Exception(f"Google API Error: {response.text}")
+        return response.json()
 
     def get_trip_details(self):
-        response = self.make_post()
-        total_distance = response.json()['routes'][0]['distanceMeters']
-        estimate_travel_time = response.json()['routes'][0]['duration']
+        data = self.make_post()
 
-        steps = response.json()['routes'][0]['legs'][0]['steps']
+        if "routes" not in data or not data["routes"]:
+            raise Exception("No route found.")
+
+        total_distance = data['routes'][0]['distanceMeters']
+        estimate_travel_time = data['routes'][0]['duration']
+
+        steps = data['routes'][0]['legs'][0]['steps']
         instructions = [
-            i.get('navigationInstruction', {}).get('instructions', '')
-            for i in steps
-            if 'navigationInstruction' in i
-        ]
+            i.get('navigationInstruction', {}).get(
+                'instructions', "Continue Straight")
+            for i in steps]
         distance_between_turns = [i["localizedValues"]
                                   ['distance']['text'] for i in steps]
-        time_between_turns = [i["staticDuration"]['text'] for i in steps]
+        time_between_turns = [i["staticDuration"] for i in steps]
 
         return {'total_distance': total_distance, 'estimate_travel_time': estimate_travel_time, 'instructions': instructions, 'distance_between_turns': distance_between_turns, 'time_between_turns': time_between_turns}
 
@@ -54,8 +58,11 @@ class MapService(ABC):
         formatted_details = {'total_distance': details['total_distance'],
                              'estimate_travel_time': details['estimate_travel_time'], 'formatted_list': []}
         for i, instruction in enumerate(details['instructions']):
-            formatted = f"In roughly {details['distance_between_turns'][i]} (Roughly {details['time_between_turns'][i]}), {instruction}"
-            formatted_details['formatted_list'].append(formatted)
+            dist = details["distance_between_turns"][i]
+            time = details["time_between_turns"][i]
+            formatted_details["formatted_list"].append(
+                f"In roughly {dist} (Roughly {time}), {instruction}"
+            )
         return formatted_details
 
 
@@ -98,10 +105,14 @@ class TravelModeSelector:
         self.travel_type = travel_type
 
     def travel_details(self):
-        if self.travel_type.lower() == 'walk':
-            return WalkService(self.olat, self.olong, self.dlat, self.dlong).get_format_trip_details()
-        elif self.travel_type.lower() == 'drive':
-            return DriveService(self.olat, self.olong, self.dlat, self.dlong).get_format_trip_details()
-        else:
-            raise InvalidTravelModeError(
-                "Invalid Travel Mode. Choose between 'drive' or 'walk'.")
+        try:
+            if self.travel_type.lower() == 'walk':
+                return WalkService(self.olat, self.olong, self.dlat, self.dlong).get_format_trip_details()
+            elif self.travel_type.lower() == 'drive':
+                return DriveService(self.olat, self.olong, self.dlat, self.dlong).get_format_trip_details()
+            else:
+                raise InvalidTravelModeError(
+                    "Invalid Travel Mode. Choose between 'drive' or 'walk'.")
+
+        except ValueError as e:
+            raise InvalidTravelModeError(f'Trip details error {e}')
